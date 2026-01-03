@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Boban Stefanovic- Luxury Photography & Video Services</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Georgia',serif;color:#e8dcc4;background:#0a0a0a;overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-2;background:linear-gradient(135deg,#1a1410 0%,#0f0c08 50%,#1a1410 100%)}
+body::after{content:'';position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;background:radial-gradient(ellipse at 30% 40%,rgba(201,169,97,0.05) 0%,transparent 40%);pointer-events:none}
+.navbar{position:fixed;top:0;width:100%;background:rgba(10,10,10,0.95);backdrop-filter:blur(10px);z-index:1000;padding:15px 20px;border-bottom:1px solid rgba(201,169,97,0.2);text-align:center}
+.navbar .logo{font-size:1.3rem;font-weight:700;letter-spacing:2px;color:#c9a961;text-transform:uppercase;margin-bottom:10px}
+.nav-links{display:flex;gap:15px;list-style:none;justify-content:center;flex-wrap:wrap}
+.nav-links a{color:#b8a67d;text-decoration:none;font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;transition:color 0.3s}
+.nav-links a:hover{color:#c9a961}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px 60px}
+.hero .subtitle{font-size:1rem;color:#b8a67d;letter-spacing:6px;text-transform:uppercase;margin-bottom:10px;font-weight:300}
+.hero h1{font-size:2.5rem;font-weight:700;color:#c9a961;letter-spacing:2px;margin-bottom:20px;line-height:1.2}
+.hero p{font-size:1rem;color:#a89878;line-height:1.6;margin:0 auto 35px;max-width:500px}
+.cta-btn{background:linear-gradient(135deg,#c9a961,#a08548);color:#1a1410;padding:16px 45px;text-decoration:none;font-size:1rem;font-weight:700;letter-spacing:2px;border-radius:50px;border:2px solid #c9a961;display:inline-block;text-transform:uppercase;transition:all 0.3s;box-shadow:0 8px 30px rgba(201,169,97,0.3)}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,97,0.5)}
+.services{padding:80px 20px}
+.services h2{font-size:2.2rem;color:#c9a961;text-align:center;margin-bottom:50px;letter-spacing:2px}
+.service-grid{display:grid;grid-template-columns:1fr;gap:25px;max-width:500px;margin:0 auto}
+.service-card{background:linear-gradient(135deg,rgba(26,20,16,0.7),rgba(20,18,15,0.8));padding:35px 25px;border-radius:15px;border:1px solid rgba(201,169,97,0.3);box-shadow:0 6px 25px rgba(0,0,0,0.3);transition:transform 0.3s}
+.service-card:hover{transform:translateY(-5px)}
+.service-card h3{font-size:1.5rem;color:#c9a961;margin-bottom:15px;letter-spacing:1.5px}
+.service-card p{color:#b8a67d;line-height:1.6;font-size:0.95rem}
+.features{background:rgba(25,20,15,0.7);padding:80px 20px}
+.features h2{font-size:2.2rem;color:#c9a961;text-align:center;margin-bottom:50px;letter-spacing:2px}
+.feature-grid{display:grid;grid-template-columns:1fr;gap:35px;max-width:500px;margin:0 auto}
+.feature-item{text-align:center;padding:25px 20px}
+.feature-icon{font-size:2.5rem;color:#c9a961;margin-bottom:15px}
+.feature-item h3{font-size:1.4rem;color:#c9a961;margin-bottom:12px;letter-spacing:1.5px}
+.feature-item p{color:#b8a67d;line-height:1.6;font-size:0.95rem}
+.contact{background:linear-gradient(135deg,rgba(120,90,55,0.5),rgba(80,60,35,0.7));padding:80px 20px;text-align:center}
+.contact h2{font-size:2.2rem;color:#c9a961;margin-bottom:20px;letter-spacing:2px}
+.contact p{font-size:1.05rem;color:#e8dcc4;line-height:1.6;margin:0 auto 35px;max-width:500px}
+.contact-btn{background:linear-gradient(135deg,#c9a961,#a08548);color:#1a1410;padding:16px 45px;text-decoration:none;font-size:1rem;font-weight:700;letter-spacing:2px;border-radius:50px;border:2px solid #c9a961;display:inline-block;text-transform:uppercase;transition:all 0.3s;box-shadow:0 8px 30px rgba(201,169,97,0.3)}
+.contact-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,169,97,0.5)}
+@media(min-width:768px){
+.navbar{padding:20px 60px;display:flex;justify-content:space-between;align-items:center}
+.navbar .logo{font-size:1.8rem;margin-bottom:0}
+.nav-links{gap:40px}
+.nav-links a{font-size:0.95rem}
+.hero{padding:140px 40px 80px}
+.hero h1{font-size:4.5rem;margin-bottom:25px;letter-spacing:3px}
+.hero .subtitle{font-size:1.4rem;letter-spacing:8px;margin-bottom:15px}
+.hero p{font-size:1.2rem;max-width:700px;margin:0 auto 50px}
+.cta-btn,.contact-btn{padding:18px 55px;font-size:1.1rem}
+.services,.features,.contact{padding:120px 60px}
+.services h2,.features h2,.contact h2{font-size:3.5rem;margin-bottom:80px}
+.service-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;max-width:1400px}
+.service-card{padding:50px 35px}
+.service-card h3{font-size:1.9rem;margin-bottom:20px}
+.service-card p{font-size:1.05rem}
+.feature-grid{grid-template-columns:repeat(3,1fr);gap:50px;max-width:1400px}
+.feature-item{padding:40px 30px}
+.feature-icon{font-size:3.5rem;margin-bottom:25px}
+.feature-item h3{font-size:1.7rem;margin-bottom:18px}
+.feature-item p{font-size:1.05rem}
+.contact p{font-size:1.3rem;max-width:800px;margin:0 auto 50px}
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">Boban Stefanovic</div>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#why">Why Choose Us</a></li>
+<li><a href="https://www.instagram.com/malayatz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Contact</a></li>
+</ul>
+</nav>
+<section class="hero">
+<div class="subtitle">Photographer</div>
+<h1>Boban Stefanovic</h1>
+<p>Luxury Photography & Video Services<br>Tailor-made content for your brand</p>
+<a href="https://www.instagram.com/malayatz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="cta-btn">Get Started</a>
+</section>
+<section class="services" id="services">
+<h2>Our Services</h2>
+<div class="service-grid">
+<div class="service-card"><h3>Brand Photography</h3><p>Elevate your brand with stunning, high-quality photography that captures your unique identity and resonates with your audience.</p></div>
+<div class="service-card"><h3>Video Production</h3><p>Cinematic video content tailored to your brand's story. From concept to final cut, we bring your vision to life.</p></div>
+<div class="service-card"><h3>Content Creation</h3><p>Consistent, engaging content designed to elevate your social media presence and connect with your target audience.</p></div>
+<div class="service-card"><h3>Event Coverage</h3><p>Professional coverage of your special events, capturing every precious moment with artistic excellence and attention to detail.</p></div>
+<div class="service-card"><h3>Portrait Sessions</h3><p>Timeless portraits that showcase personality and style. Perfect for personal branding, headshots, and special occasions.</p></div>
+<div class="service-card"><h3>Commercial Work</h3><p>High-end commercial photography and video for businesses, products, and advertising campaigns that demand excellence.</p></div>
+</div>
+</section>
+<section class="features" id="why">
+<h2>Why Choose Us</h2>
+<div class="feature-grid">
+<div class="feature-item"><div class="feature-icon">✦</div><h3>Premium Quality</h3><p>We use state-of-the-art equipment and techniques to deliver stunning results that exceed expectations every time.</p></div>
+<div class="feature-item"><div class="feature-icon">✧</div><h3>Tailored Approach</h3><p>Every project is unique. We work closely with you to understand your vision and create content that truly represents your brand.</p></div>
+<div class="feature-item"><div class="feature-icon">✦</div><h3>Fast Turnaround</h3><p>Professional service with quick delivery. We respect your timeline and ensure you receive your content when you need it.</p></div>
+</div>
+</section>
+<section class="contact" id="contact">
+<h2>Let's Create Together</h2>
+<p>Ready to elevate your brand with stunning photography and video content? Get in touch with us today and let's bring your vision to life.</p>
+<a href="https://www.instagram.com/malayatz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="contact-btn">Book a Session</a>
+</section>
+</body>
+</html>
